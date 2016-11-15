@@ -7,31 +7,24 @@ h1,h2,h3,h4,h5 {
 }
 
 .nav-wrapper .order-link {
-  padding-right: 2%;3
+  padding-right: 2%;
 }
 
-.hero {
-  position: relative;
+header {
+  background-image: url('../img/hero.jpg');
+  background-size: cover;
+  height: 450px;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero .content {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.hero .content h1 {
-  color: white;
+header h1 {
   font-weight: black;
-  position: relative;
+  font-size: 75px;
 }
 
-.hero .content button {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 5%;
+header button {
+  margin-top: 15px;
 }
 
 .copy {
