@@ -44,6 +44,10 @@ footer {
   color: white;
 }
 
+i {
+  vertical-align: bottom;
+}
+
 .footer-links {
   text-decoration: none;
   color: white;
