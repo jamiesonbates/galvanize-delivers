@@ -1,0 +1,64 @@
+h1,h2,h3,h4,h5 {
+  margin: 0;
+}
+
+.nav-wrapper .brand-logo {
+  padding-left: 2%;
+}
+
+.nav-wrapper .order-link {
+  padding-right: 2%;3
+}
+
+.hero {
+  position: relative;
+}
+
+.hero .content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero .content h1 {
+  color: white;
+  font-weight: black;
+  position: relative;
+}
+
+.hero .content button {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.copy {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+footer {
+  position: relative;
+  color: white;
+}
+
+.footer-links {
+  text-decoration: none;
+  color: white;
+}
+
+.sub-footer {
+  padding-top: 50px;
+  padding-botton: 50px;
+}
+
+.botton-footer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.material-icons {
+  font-size: 2.92rem;
+}
