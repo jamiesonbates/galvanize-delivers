@@ -24,7 +24,7 @@ header h1 {
 }
 
 header button {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .copy {
@@ -34,6 +34,7 @@ header button {
 
 i {
   vertical-align: bottom;
+
 }
 
 footer {
@@ -58,4 +59,18 @@ footer {
 
 .material-icons {
   font-size: 2.92rem;
+}
+
+.order h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input-field input[type=text] {
+     border-bottom: 1px solid #66bb6a;
+     box-shadow: 0 1px 0 0 #66bb6a;
+   }
+
+.order-conversion {
+  text-align: center;
 }
