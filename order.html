@@ -16,14 +16,24 @@
     <!--Import jQuery before materialize.js-->
     <script defer type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script defer type="text/javascript" src="js/materialize.min.js"></script>
+    <script defer type="text/javascript" src="js/order.js"></script>
   </head>
   <body>
     <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper light-blue darken-3">
-            <ul>
-              <li><a href="index.html" class="brand-logo">Galvanize Delivers</a></li>
-              <li class="active right"><a href="#" >Order Delivery</a></li>
+            <a class="brand-logo" href="index.html">Galvanize Delivers</a>
+            <a href="#" data-activates="menu" class="button-collapse">
+              <i class="material-icons">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down">
+              <li class="active"><a href="order.html">Order Delivery</a></li>
+            </ul>
+
+            <ul class="side-nav" id="menu">
+              <li class="active"><a href="order.html">Order Delivery</a></li>
+            </ul>
           </div>
         </nav>
     </div>
@@ -31,23 +41,17 @@
     <main class="order">
       <div class="container">
         <div class="row">
-          <div class="col s7">
+          <div class="col s12 m12 l7">
             <h3>Menu</h3>
-          </div>
-          <div class="col s5">
-            <h3>Order</h3>
-          </div>
-        <div class="row">
-          <div class="col s7">
             <div class="row">
-              <div class="col s6">
+              <div class="col s12 m6">
                 <div class="card">
                   <div class="card-image">
                     <img src="img/burger.jpg">
                   </div>
                   <div class="card-content">
-                    <h5>Royale with Cheese</h5>
-                    <p>$8.99</p>
+                    <h5 class="item">Royale with Cheese</h5>
+                    <p class="price">$8.99</p>
                   </div>
                   <div class="card-action">
                     <a href="#">Add to Order</a>
@@ -55,14 +59,14 @@
                 </div>
               </div>
 
-              <div class="col s6">
+              <div class="col s12 m6">
                 <div class="card">
                   <div class="card-image">
                     <img src="img/pizza.jpg">
                   </div>
                   <div class="card-content">
-                    <h5>Arugula Pie</h5>
-                    <p>$11.99</p>
+                    <h5 class="item">Arugula Pie</h5>
+                    <p class="price">$11.99</p>
                   </div>
                   <div class="card-action">
                     <a href="#">Add to Order</a>
@@ -72,14 +76,14 @@
             </div>
 
             <div class="row">
-              <div class="col s6">
+              <div class="col s12 m6">
                 <div class="card">
                   <div class="card-image">
                     <img src="img/ribs.jpg">
                   </div>
                   <div class="card-content">
-                    <h5>Smoked Swine</h5>
-                    <p>$14.99</p>
+                    <h5 class="item">Smoked Swine</h5>
+                    <p class="price">$14.99</p>
                   </div>
                   <div class="card-action">
                     <a href="#">Add to Order</a>
@@ -87,14 +91,14 @@
                 </div>
               </div>
 
-              <div class="col s6">
+              <div class="col s12 m6">
                 <div class="card">
                   <div class="card-image">
                     <img src="img/ice_cream.jpg">
                   </div>
                   <div class="card-content">
-                    <h5>Ice Cream Biscut</h5>
-                    <p>$7.99</p>
+                    <h5 class="item">Ice Cream Biscut</h5>
+                    <p class="price">$7.99</p>
                   </div>
                   <div class="card-action">
                     <a href="#">Add to Order</a>
@@ -104,82 +108,65 @@
             </div>
           </div>
 
-          <div class="col s5">
-              <table class="striped responsive-table">
-                <thead>
-                  <tr>
-                    <th>Item</th>
-                    <th class="right">Price</th>
-                  </tr>
-                </thead>
+          <div class="col s12 m12 l5">
+            <h3>Order</h3>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th class="right">Price</th>
+                </tr>
+              </thead>
 
-                <tbody>
-                  <tr>
-                    <td>Royale with Cheese</td>
-                    <td class="right">$8.99</td>
-                  </tr>
-                  <tr>
-                    <td>Arugula Pie</td>
-                    <td class="right">$11.99</td>
-                  </tr>
-                  <tr>
-                    <td>Smoked Swine</td>
-                    <td class="right">$14.99</td>
-                  </tr>
-                  <tr>
-                    <td>Ice Cream Biscut</td>
-                    <td class="right">$7.99</td>
-                  </tr>
-                </tbody>
+              <tbody>
+              </tbody>
 
-                <tfoot>
-                  <tr>
-                    <th class="right">Subtotal</th>
-                    <td class="right-align">$43.96</td>
-                  </tr>
-                  <tr>
-                    <th class="right">Tax</th>
-                    <td class="right-align">$4.40</td>
-                  </tr>
-                    <th class="right">Total</th>
-                    <td class="right-align">$48.36</td>
-                  </tr>
-                </tfoot>
-              </table>
+              <tfoot>
+                <tr>
+                  <th class="right">Subtotal</th>
+                  <td class="right-align subtotal"></td>
+                </tr>
+                <tr>
+                  <th class="right">Tax</th>
+                  <td class="right-align tax"></td>
+                </tr>
+                  <th class="right">Total</th>
+                  <td class="right-align total"></td>
+                </tr>
+              </tfoot>
+            </table>
+
+            <form>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix red-text text-lighten-1">account_circle</i>
+                  <input placeholder="Bill Gates" type="text" class="validate name" required="" aria-required="true"></input>
+                  <label for="name" data-error="Required" data-success="Valid">Name</label>
+                </div>
+              </div>
 
               <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <i class="material-icons prefix red-text text-lighten-1">account_circle</i>
-                      <input placeholder="Bill Gates" type="text" class="validate"></input>
-                      <label for="name">Name</label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <i class="material-icons prefix red-text text-lighten-1">call</i>
-                      <input placeholder="555-555-5555" type="text" class="validate"></input>
-                      <label for="phoneNumber">Phone Number</label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <i class="material-icons prefix red-text text-lighten-1">business</i>
-                      <input placeholder="One Microsoft Way Redmond, WA 98052-6399" type="text" class="validate"></input>
-                      <label for="address">Address</label>
-                    </div>
-                  </div>
-
-                  <div class="row order-conversion">
-                    <div class="col s12">
-                      <button class="center-align btn-large white-text red lighten-1">Place Order</button>
-                    </div>
-                  </div>
-                </form>
+                <div class="input-field col s12">
+                  <i class="material-icons prefix red-text text-lighten-1">call</i>
+                  <input placeholder="555-555-5555" type="text" class="validate phone-number" required="" aria-required="true"></input>
+                  <label for="phoneNumber" data-error="Required" data-success="Valid">Phone Number</label>
+                </div>
               </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix red-text text-lighten-1">business</i>
+                  <input placeholder="One Microsoft Way Redmond, WA 98052-6399" type="text" class="validate address" required="" aria-required="true"></input>
+                  <label for="address" data-error="Required" data-success="Valid">Address</label>
+                </div>
+              </div>
+
+              <div class="row order-conversion">
+                <div class="col s12">
+                  <button class="center-align btn-large white-text red lighten-1">Place Order</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -195,7 +182,7 @@
           <div class="col s6 push-s2">
             <ul>
               <li><a class="footer-links" href="index.html">Home</a><li>
-              <li><a class="footer-links" href="#">Order Delivery</a></li>
+              <li><a class="footer-links" href="order.html">Order Delivery</a></li>
             </ul>
           </div>
         </div>
