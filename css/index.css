@@ -72,10 +72,21 @@ footer {
 }
 
 .input-field input[type=text] {
-     border-bottom: 1px solid #66bb6a;
-     box-shadow: 0 1px 0 0 #66bb6a;
-   }
+  border-bottom: 1px solid #66bb6a;
+  box-shadow: 0 1px 0 0 #66bb6a;
+}
+
+.input-field input[type=text]:focus {
+  border-bottom: 2px solid #66bb6a;
+  color: #66bb6a;
+}
+
+
 
 .order-conversion {
   text-align: center;
+}
+
+.item {
+  font-size: 1.2em;
 }
